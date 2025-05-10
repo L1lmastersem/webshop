@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .nav-links a.active {
+    color: #2ecc71;
+    text-decoration: underline;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .cart-icon {
+    font-size: 18px;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .contact-btn {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Product Hero */
+  .product-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 160px 5% 80px;
+    background-color: #f9f9f9;
+  }
+  
+  .product-preview {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .product-preview img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-summary {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .product-summary h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #111;
+  }
+  
+  .price {
+    font-size: 1.8rem;
+    color: #2ecc71;
+    font-weight: 600;
+  }
+  
+  .desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  /* Size Dropdown */
+  .product-summary label[for="size"] {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .product-summary select#size {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D%22%23666%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5z%22/%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+  }
+  
+  .product-summary select#size:focus {
+    border-color: #333;
+    outline: none;
+  }
+  
+  .add-to-cart {
+    padding: 0.8rem 1.6rem;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 2rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .nav-right {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+  
+    .product-hero {
+      flex-direction: column;
+      padding: 120px 1.5rem 2rem;
+    }
+  
+    .product-preview, .product-summary {
+      max-width: 100%;
+    }
+  
+    .product-summary h1 {
+      font-size: 1.8rem;
+    }
+  
+    .price {
+      font-size: 1.5rem;
+    }
+  }
+  
