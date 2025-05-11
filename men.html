@@ -6,11 +6,13 @@
   <title>Men's Collection | KudelCity</title>
   <link rel="stylesheet" href="style.css" />
   <script src="all.mis.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html" class="logo">KUDELCITY</a>
+<header class="navbar">
+  <a href="index.html" class="logo">KUDELCITY</a>
 
+  <nav>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
 
@@ -23,7 +25,7 @@
         </ul>
       </li>
 
-     <li class="nav-item">
+      <li class="nav-item">
         <a href="women.html">Women</a>
         <ul class="dropdown">
           <li><a href="women-tops.html">Tops</a></li>
@@ -32,14 +34,40 @@
         </ul>
       </li>
     </ul>
+  </nav>
 
-    <div class="nav-right">
-      <a href="#" class="cart-icon">
-        <i class="fas fa-shopping-cart"></i>
-      </a>
-      <a href="index.html" class="contact-btn">Contact</a>
+  <div class="nav-right">
+    <a href="#" class="cart-icon" id="cart-icon" style="position: relative;">
+      🛒
+      <span id="cart-count">0</span>
+    </a>
+    <a href="#contact1" class="contact-btn">Contact</a>
+  </div>
+
+  <div id="cart-overlay" class="cart-overlay hidden"></div>
+
+  <div id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+      <button id="close-cart" style="margin-bottom: 1rem; background: none; border: none; font-size: 16px; cursor: pointer;">
+        &larr; Close
+      </button>
+      <h3>Your Cart</h3>
     </div>
-  </header>
+
+    <div id="cart-items" class="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+      <span>Subtotal:</span>
+      <span>€<span id="subtotal">0.00</span></span>
+      <div>
+        <button class="cart-btn" id="view-bag">View Bag</button>
+        <button class="cart-btn" id="checkout">Checkout</button>
+      </div>
+    </div>
+  </div>
+</header>
 
   <section class="products" style="margin-top: 120px;">
     <div class="container">
