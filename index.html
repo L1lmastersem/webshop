@@ -19,14 +19,28 @@
         <li><a href="#products">Products</a></li>
       </ul>
     </nav>
-    <div class="nav-right">
-  <div id="cart-icon">
-    <i class="fas fa-shopping-cart"></i>
+<div class="nav-right">
+  <a href="#" class="cart-icon" id="cart-icon" style="position: relative;">
+    🛒
     <span id="cart-count">0</span>
+  </a>
+  <a href="#contact1" class="contact-btn">Contact</a>
+</div>
+<div id="cart-overlay" class="hidden"></div>
+<div id="cart-panel">
+  <button id="close-cart" style="margin-bottom: 1rem; background: none; border: none; font-size: 16px; cursor: pointer;">
+    &larr; Close
+  </button>
+  
+  <h3>Your Cart</h3>
+  <div id="cart-items">
   </div>
 
-      <a href="#contact1" class="contact-btn">Contact</a>
-    </div>
+  <div class="cart-footer">
+    <span>Subtotal:</span>
+    <span>€<span id="subtotal">0.00</span></span>
+  </div>
+</div>
   </header>
  <i class="fas fa-shopping-cart"></i>
   <section class="hero">
