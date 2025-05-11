@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Men's Collection | KudelCity</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="all.mis.js"></script>
 </head>
 <body>
   <header class="navbar">
     <a href="index.html" class="logo">KUDELCITY</a>
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="#" class="active">Men</a></li>
-      <li><a href="women.html">Women</a></li>
+
+      <li class="nav-item">
+        <a href="#" class="active">Men</a>
+        <ul class="dropdown">
+          <li><a href="men-shirts.html">Shirts</a></li>
+          <li><a href="men-shorts.html">Shorts</a></li>
+          <li><a href="men-hoodies.html">Hoodies</a></li>
+        </ul>
+      </li>
+
+     <li class="nav-item">
+        <a href="women.html">Women</a>
+        <ul class="dropdown">
+          <li><a href="women-tops.html">Tops</a></li>
+          <li><a href="women-shorts.html">Shorts</a></li>
+          <li><a href="women-leggings.html">Leggings</a></li>
+        </ul>
+      </li>
     </ul>
+
     <div class="nav-right">
-        <a href="#" class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-      <a href="contact.html" class="contact-btn">Contact</a>
+      <a href="#" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="index.html" class="contact-btn">Contact</a>
     </div>
   </header>
 
@@ -30,31 +48,30 @@
 
       <div class="product-grid">
         <a href="product.html" class="product-card">
-            <img src="img/men-shirt1.webp" alt="Performance Shirt">
-            <div class="product-info">
-              <h3>Performance Shirt <span>$29</span></h3>
-              <p>Breathable and sweat-wicking for every session.</p>
-            </div>
-          </a>
+          <img src="img/men-shirt1.webp" alt="Performance Shirt" />
+          <div class="product-info">
+            <h3>Performance Shirt <span>$29</span></h3>
+            <p>Breathable and sweat-wicking for every session.</p>
+          </div>
+        </a>
 
-        <div class="product-card">
-          <img src="img/men-shorts1.webp" alt="Training Shorts">
+        <a href="product2.html" class="product-card">
+          <img src="img/men-shorts1.webp" alt="Training Shorts" />
           <div class="product-info">
             <h3>Training Shorts <span>$35</span></h3>
             <p>Lightweight comfort with max mobility.</p>
           </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-          <img src="img/men-hoodie1.webp" alt="Athletic Hoodie">
+        <a href="product3.html" class="product-card">
+          <img src="img/men-hoodie1.webp" alt="Athletic Hoodie" />
           <div class="product-info">
             <h3>Athletic Hoodie <span>$49</span></h3>
             <p>Layer up with our premium stretch hoodie.</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
-
 </body>
 </html>
