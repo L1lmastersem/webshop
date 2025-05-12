@@ -5,37 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Performance Shirt | KUDELCITY</title>
   <link rel="stylesheet" href="product.css" />
+  <link rel="stylesheet" href="style.css"/>
   <script src="all.mis.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
   <header class="navbar">
     <a href="index.html" class="logo">KUDELCITY</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about1">About</a></li>
+        <li><a href="#products">Products</a></li>
+      </ul>
+    </nav>
+<div class="nav-right">
+  <a href="#" class="cart-icon" id="cart-icon" style="position: relative;">
+     <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </a>
+  <a href="#contact1" class="contact-btn">Contact</a>
+</div>
+<div id="cart-overlay" class="hidden"></div>
+<div id="cart-panel">
+  <button id="close-cart" style="margin-bottom: 1rem; background: none; border: none; font-size: 16px; cursor: pointer;">
+    &larr; Close
+  </button>
+  
+  <h3>Your Cart</h3>
+  <div id="cart-items">
+  </div>
 
-      <li class="nav-item">
-        <a class="active" href="men.html">Men</a>
-        <ul class="dropdown">
-          <li><a href="men-shirts.html">Shirts</a></li>
-          <li><a href="men-shorts.html">Shorts</a></li>
-          <li><a href="men-hoodies.html">Hoodies</a></li>
-        </ul>
-      </li>
-
-      <li class="nav-item">
-        <a href="women.html">Women</a>
-        <ul class="dropdown">
-          <li><a href="women-tops.html">Tops</a></li>
-          <li><a href="women-shorts.html">Shorts</a></li>
-          <li><a href="women-leggings.html">Leggings</a></li>
-        </ul>
-      </li>
-    </ul>
-    <div class="nav-right">
-      <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-      <a href="index.html" class="contact-btn">Contact</a>
-    </div>
+  <div class="cart-footer">
+    <span>Subtotal:</span>
+    <span>€<span id="subtotal">0.00</span></span>
+  </div>
+</div>
   </header>
 
   <main class="product-hero">
@@ -72,7 +78,7 @@
 </div>
 
 
-      <button class="add-to-cart">Add to Cart</button>
+      <button onclick="addToCartFromProductPage('Red Tank Top', 24.99)" class="add-to-cart">Add to Cart</button>
     </div>
   </main>
 

@@ -6,11 +6,14 @@
   <title>Women's Collection</title>
   <link rel="stylesheet" href="style.css" />
   <script src="all.mis.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="index.html" class="logo">KUDELCITY</a>
+<header class="navbar">
+  <a href="index.html" class="logo">KUDELCITY</a>
+
+  <nav>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
 
@@ -24,7 +27,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="active" href="women.html">Women</a>
+        <a href="women.html" class="active">Women</a>
         <ul class="dropdown">
           <li><a href="women-tops.html">Tops</a></li>
           <li><a href="women-shorts.html">Shorts</a></li>
@@ -32,12 +35,35 @@
         </ul>
       </li>
     </ul>
-
-    <div class="nav-right">
-      <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-      <a href="index.html" class="contact-btn">Contact</a>
-    </div>
   </nav>
+
+  <div class="nav-right">
+    <a href="#" class="cart-icon" id="cart-icon" style="position: relative;">
+       <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count">0</span>
+    </a>
+    <a href="index.html" class="contact-btn">Contact</a>
+  </div>
+
+  <div id="cart-overlay" class="cart-overlay hidden"></div>
+
+  <div id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+      <button id="close-cart" style="margin-bottom: 1rem; background: none; border: none; font-size: 16px; cursor: pointer;">
+        &larr; Close
+      </button>
+      <h3>Your Cart</h3>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+    </div>
+
+    <div class="cart-footer">
+      <span>Subtotal:</span>
+      <span>€<span id="subtotal">0.00</span></span>
+    </div>
+  </div>
+</header>
 
   <section class="products" style="padding-top: 8rem;">
     <div class="container">
