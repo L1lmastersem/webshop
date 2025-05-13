@@ -1,9 +1,6 @@
-
-  // Load cart from localStorage or initialize empty
   let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
   let subtotal = 0;
 
-  // DOM elements
   const cartIcon = document.getElementById('cart-icon');
   const cartPanel = document.getElementById('cart-panel');
   const closeCart = document.getElementById('close-cart');
@@ -12,7 +9,6 @@
   const subtotalDisplay = document.getElementById('subtotal');
   const cartCount = document.getElementById('cart-count');
 
-  // Show/hide cart
   if (cartIcon && cartPanel && overlay) {
     cartIcon.addEventListener('click', () => {
       cartPanel.classList.add('show');
@@ -28,21 +24,18 @@
     overlay?.addEventListener('click', closeCartPanel);
   }
 
-  // Add product to cart and save to localStorage
   function addToCart(product) {
     cartItems.push(product);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     updateCartUI();
   }
 
-  // Remove product from cart
   function removeFromCart(index) {
     cartItems.splice(index, 1);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     updateCartUI();
   }
 
-  // Update cart UI
   function updateCartUI() {
     if (!cartItemsContainer || !subtotalDisplay || !cartCount) return;
 
@@ -70,10 +63,8 @@
     subtotalDisplay.textContent = subtotal.toFixed(2);
   }
 
-  // Call on load
   document.addEventListener('DOMContentLoaded', updateCartUI);
 
-  // For adding from other pages like product.html
   function addToCartFromProductPage(name, price) {
     const product = { name, price };
     cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -82,5 +73,4 @@
     updateCartUI();
   }
 
-  // Optional: expose function globally
   window.addToCartFromProductPage = addToCartFromProductPage;
