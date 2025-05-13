@@ -76,9 +76,10 @@
   // For adding from other pages like product.html
   function addToCartFromProductPage(name, price) {
     const product = { name, price };
-    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     cartItems.push(product);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateCartUI();
   }
 
   // Optional: expose function globally
