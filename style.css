@@ -167,6 +167,17 @@ body, html {
   font-size: 0.85rem;
 }
 
+.checkout-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
 .cart-footer {
   border-top: 1px solid #ddd;
   padding-top: 1rem;
@@ -461,6 +472,78 @@ section.contact-section {
   color: #333;
   text-decoration: underline;
 }
+
+.site-footer {
+  background-color: #f8f8f8;
+  padding: 3rem 2rem;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-tiles .tile {
+  background: #000;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.payment-icons img {
+  height: 24px;
+  margin: 0 5px;
+}
+
 
 @media (max-width: 768px) {
   .navbar {
