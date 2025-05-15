@@ -100,6 +100,14 @@ body, html {
   gap: 2rem;
 }
 
+.user-icon {
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+
 .cart-icon {
   font-size: 18px;
   color: #000000;
