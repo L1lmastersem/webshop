@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost'; // docker service name
+$host = '38252.hosts2.ma-cloud.nl'; // docker service name
 $db = 'webshop';
 $user = 'user';
 $pass = 'secret';
