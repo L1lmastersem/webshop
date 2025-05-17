@@ -1,5 +1,5 @@
 <?php
-$host = 'db'; // docker service name
+$host = 'localhost'; // docker service name
 $db = 'webshop';
 $user = 'user';
 $pass = 'secret';
