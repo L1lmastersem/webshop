@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$db = '38252_webshop';
-$user = '38252';
-$pass = 'your_database_password';
+$host = 'db'; // docker service name
+$db = 'webshop';
+$user = 'user';
+$pass = 'secret';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
