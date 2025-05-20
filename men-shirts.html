@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Men's Collection | KudelCity</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="all.mis.js"></script>
+  <script src="script.js" defer></script>
+  <script src="product.js" defer></script>
+</head>
+<body>
+  
+<header class="navbar">
+  <a href="index.html" class="logo">KUDELCITY</a>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+
+      <li class="nav-item">
+        <a href="#" class="active">Men</a>
+        <ul class="dropdown">
+          <li><a href="men-shirts.html">Shirts</a></li>
+          <li><a href="men-shorts.html">Shorts</a></li>
+          <li><a href="men-hoodies.html">Hoodies</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a href="women.html">Women</a>
+        <ul class="dropdown">
+          <li><a href="women-tops.html">Tops</a></li>
+          <li><a href="women-shorts.html">Shorts</a></li>
+          <li><a href="women-leggings.html">Leggings</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="nav-right">
+    <a href="#" class="cart-icon" id="cart-icon" style="position: relative;">
+       <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count">0</span>
+    </a>
+    <a href="./index.html#contact1" class="contact-btn">Contact</a>
+  </div>
+
+  <div id="cart-overlay" class="cart-overlay hidden"></div>
+
+  <div id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+      <button id="close-cart" style="margin-bottom: 1rem; background: none; border: none; font-size: 16px; cursor: pointer;">
+        &larr; Close
+      </button>
+      <h3>Your Cart</h3>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+    </div>
+
+    <div class="cart-footer">
+      <span>Subtotal:</span>
+      <span>€<span id="subtotal">0.00</span></span>
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+</header>
+
+  <section class="products" style="margin-top: 120px;">
+    <div class="container">
+      <p class="section-label">Men's Collection</p>
+      <h2>Explore our performance-driven gear for men</h2>
+
+      <div class="product-grid"></div>
+    </div>
+  </section>
+
+</body>
+</html>

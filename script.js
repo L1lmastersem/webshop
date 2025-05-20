@@ -1,3 +1,5 @@
+  
+  /*cart*/
   let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
   let subtotal = 0;
 
