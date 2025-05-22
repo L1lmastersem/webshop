@@ -8,16 +8,16 @@ const products = [
     link: "product.html"
   },
     {
-    name: "Athletic Hoodie",
-    price: 49,
-    img: "img/men-shirts2.webp",
-    desc: "Layer up with our premium stretch hoodie.",
+    name: "Training Shorts",
+    price: 35,
+    img: "img/men-shirt1.webp",
+    desc: "Designed for peak performance. Lightweight, breathable, and made to move with you.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts3.webp",
+    img: "img/men-shirt1.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
@@ -167,29 +167,3 @@ products.forEach(product => {
   `;
   grid.appendChild(card);
 });
-
-if (window.observeFadeInSections) {
-  window.observeFadeInSections();
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-  });
-
-  window.observeFadeInSections = () => {
-    const cards = document.querySelectorAll('.fade-in-section:not(.visible)');
-    cards.forEach(card => observer.observe(card));
-  };
-
-  observeFadeInSections();
-});
-
-
