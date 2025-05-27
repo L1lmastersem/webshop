@@ -147,7 +147,41 @@ const products = [
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
-
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts16.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts17.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts18.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts19.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts20.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
 
 
 ];
@@ -167,3 +201,56 @@ products.forEach(product => {
   `;
   grid.appendChild(card);
 });
+
+const productsPerPage = 5;
+let currentIndex = 0;
+
+const productGrid = document.querySelector('.product-grid');
+const loader = document.getElementById('loading');
+
+function loadMoreProducts() {
+  const nextProducts = products.slice(currentIndex, currentIndex + productsPerPage);
+
+  nextProducts.forEach(product => {
+    const card = document.createElement('a');
+    card.href = product.link;
+    card.className = 'product-card fade-in-section';
+    card.innerHTML = `
+      <img src="${product.img}" alt="${product.name}" />
+      <div class="product-info">
+        <h3>${product.name} <span>€${product.price}</span></h3>
+        <p>${product.desc}</p>
+      </div>
+    `;
+    productGrid.appendChild(card);
+  });
+
+  currentIndex += productsPerPage;
+
+  if (currentIndex >= products.length) {
+    observer.unobserve(loader);
+    loader.style.display = 'none';
+  }
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      loadMoreProducts();
+    }
+  });
+}, {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.25
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadMoreProducts();
+  observer.observe(loader);
+});
+setTimeout(() => {
+  document.querySelectorAll('.fade-in-section').forEach(el => {
+    el.classList.add('visible');
+  });
+}, 50);
