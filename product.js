@@ -188,19 +188,6 @@ const products = [
 
 const grid = document.querySelector('.product-grid');
 
-products.forEach(product => {
-  const card = document.createElement('a');
-  card.href = product.link;
-  card.className ='product-card fade-in-section';
-  card.innerHTML = `
-    <img src="${product.img}" alt="${product.name}" />
-    <div class="product-info">
-      <h3>${product.name} <span>${product.price}</span></h3>
-      <p>${product.desc}</p>
-    </div>
-  `;
-  grid.appendChild(card);
-});
 
 const productsPerPage = 5;
 let currentIndex = 0;
@@ -223,6 +210,10 @@ function loadMoreProducts() {
       </div>
     `;
     productGrid.appendChild(card);
+
+    requestAnimationFrame(() => {
+      card.classList.add('visible');
+    });
   });
 
   currentIndex += productsPerPage;
@@ -247,10 +238,5 @@ const observer = new IntersectionObserver((entries) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadMoreProducts();
-  observer.observe(loader);
+  if (loader) observer.observe(loader);
 });
-setTimeout(() => {
-  document.querySelectorAll('.fade-in-section').forEach(el => {
-    el.classList.add('visible');
-  });
-}, 50);
