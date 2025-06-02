@@ -8,17 +8,17 @@ const products = [
     link: "product.html"
   },
     {
-    name: "Training Shorts",
-    price: 35,
+    name: "Performance Shirt",
+    price: 29,
     img: "img/men-shirt1.webp",
-    desc: "Designed for peak performance. Lightweight, breathable, and made to move with you.",
+    desc: "Breathable and sweat-wicking for every session.",
     link: "product3.html"
   },
     {
-    name: "Athletic Hoodie",
-    price: 49,
+    name: "Performance Shirt",
+    price: 29,
     img: "img/men-shirt1.webp",
-    desc: "Layer up with our premium stretch hoodie.",
+    desc: "Breathable and sweat-wicking for every session.",
     link: "product3.html"
   },
     {
