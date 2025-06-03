@@ -188,7 +188,6 @@ const products = [
 
 const grid = document.querySelector('.product-grid');
 
-
 const productsPerPage = 5;
 let currentIndex = 0;
 
@@ -239,4 +238,66 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener("DOMContentLoaded", () => {
   loadMoreProducts();
   if (loader) observer.observe(loader);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("filter-toggle");
+  const filterPanel = document.getElementById("filter-panel");
+
+  toggleBtn.addEventListener("click", () => {
+    filterPanel.classList.toggle("show");
+  });
+});
+
+/*filter*/
+document.querySelector(".apply-filters").addEventListener("click", () => {
+  const selectedPrice = document.querySelector('input[name="price"]:checked')?.value;
+
+  let filteredProducts = [...products];
+
+  if (selectedPrice === 'cheapest') {
+    const min = Math.min(...products.map(p => p.price));
+    filteredProducts = products.filter(p => p.price === min);
+  } else if (selectedPrice === 'expensive') {
+    const max = Math.max(...products.map(p => p.price));
+    filteredProducts = products.filter(p => p.price === max);
+  }
+
+  productGrid.innerHTML = '';
+  currentIndex = 0;
+
+  observer.unobserve(loader);
+  loader.style.display = 'none';
+
+  filteredProducts.forEach(product => {
+    const card = document.createElement('a');
+    card.href = product.link;
+    card.className = 'product-card fade-in-section';
+    card.setAttribute('data-price', product.price);
+    card.innerHTML = `
+      <img src="${product.img}" alt="${product.name}" />
+      <div class="product-info">
+        <h3>${product.name} <span>€${product.price}</span></h3>
+        <p>${product.desc}</p>
+      </div>
+    `;
+    productGrid.appendChild(card);
+    requestAnimationFrame(() => card.classList.add('visible'));
+  });
+});
+
+/*search*/
+  document.addEventListener("DOMContentLoaded", function () {
+  const searchToggle = document.querySelector(".search-toggle");
+  const searchContainer = document.querySelector(".search-container");
+  const searchInput = document.querySelector(".search-input");
+
+  searchToggle.addEventListener("click", () => {
+    searchContainer.classList.toggle("active");
+    if (searchContainer.classList.contains("active")) {
+      searchInput.focus();
+    } else {
+      searchInput.blur();
+    }
+  });
 });

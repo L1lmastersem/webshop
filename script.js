@@ -76,3 +76,37 @@
   }
 
   window.addToCartFromProductPage = addToCartFromProductPage;
+
+  /*darkmode*/
+  const toggleButton = document.getElementById('dark-mode-toggle');
+  const body = document.body;
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  });
+
+/*search*/
+  document.addEventListener("DOMContentLoaded", function () {
+  const searchToggle = document.querySelector(".search-toggle");
+  const searchContainer = document.querySelector(".search-container");
+  const searchInput = document.querySelector(".search-input");
+
+  searchToggle.addEventListener("click", () => {
+    searchContainer.classList.toggle("active");
+    if (searchContainer.classList.contains("active")) {
+      searchInput.focus();
+    } else {
+      searchInput.blur();
+    }
+  });
+});

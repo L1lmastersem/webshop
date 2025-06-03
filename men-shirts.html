@@ -38,13 +38,25 @@
     </ul>
   </nav>
 
-  <div class="nav-right">
-    <a href="#" class="cart-icon" id="cart-icon" style="position: relative;">
-       <i class="fas fa-shopping-cart"></i>
-      <span id="cart-count">0</span>
-    </a>
-    <a href="./index.html#contact1" class="contact-btn">Contact</a>
+ <div class="nav-right">
+  <a href="User.html" class="user-icon">
+    <i class="fa-solid fa-user"></i>
+  </a>
+
+  <div class="search-container">
+    <button class="search-toggle" aria-label="Open search">
+      <i class="fas fa-search"></i>
+    </button>
+    <input type="text" class="search-input" placeholder="Search...">
   </div>
+
+  <a href="#" class="cart-icon" id="cart-icon" style="position: relative;">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </a>
+
+  <a href="#contact1" class="contact-btn">Contact</a>
+</div>
 
   <div id="cart-overlay" class="cart-overlay hidden"></div>
 
@@ -71,6 +83,25 @@
     <div class="container">
       <p class="section-label">Men's Collection</p>
       <h2>Explore our performance-driven gear for men</h2>
+
+<div class="filter-container">
+  <button id="filter-toggle" class="filter-btn">
+    <i class="fas fa-filter"></i> Filter
+  </button>
+
+  <div id="filter-panel" class="filter-panel hidden">
+    <h4>Filter by</h4>
+    
+<div class="filter-group">
+  <p>Price</p>
+  <label><input type="radio" name="price" value="cheapest"> Cheapest</label><br>
+  <label><input type="radio" name="price" value="expensive"> Expensive</label><br>
+  <label><input type="radio" name="price" value="all" checked> All</label>
+</div>
+
+    <button class="apply-filters">Apply</button>
+  </div>
+</div>
 
       <div class="product-grid"></div>
       <div id="loading">Loading...</div>
