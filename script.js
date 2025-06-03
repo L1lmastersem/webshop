@@ -1,4 +1,3 @@
-  
   /*cart*/
   let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
   let subtotal = 0;
@@ -96,10 +95,223 @@
   });
 
 /*search*/
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const searchToggle = document.querySelector(".search-toggle");
   const searchContainer = document.querySelector(".search-container");
   const searchInput = document.querySelector(".search-input");
+  const searchResults = document.getElementById("search-results");
+
+  const products = [
+{
+    name: "Performance Shirt",
+    price: 29,
+    img: "img/men-shirt1.webp",
+    desc: "Breathable and sweat-wicking for every session.",
+    link: "product.html"
+  },
+    {
+    name: "Power T-shirt",
+    price: 29,
+    img: "img/men-shirt1.webp",
+    desc: "Breathable and sweat-wicking for every session.",
+    link: "product3.html"
+  },
+    {
+    name: "Ribbed T-shirt",
+    price: 29,
+    img: "img/men-shirt1.webp",
+    desc: "Breathable and sweat-wicking for every session.",
+    link: "product3.html"
+  },
+    {
+    name: "Essentials T=shirt",
+    price: 49,
+    img: "img/men-shirts4.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Legacy T-shirt",
+    price: 49,
+    img: "img/men-shirts5.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Warp knit LS T-shirt",
+    price: 49,
+    img: "img/men-shirts6.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Warp knit T-shirt",
+    price: 49,
+    img: "img/men-shirts7.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Crest T-shirt",
+    price: 49,
+    img: "img/men-shirts8.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Lightweight Slub T-shirt",
+    price: 49,
+    img: "img/men-shirts9.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Oversized T-shirt",
+    price: 49,
+    img: "img/men-shirts10.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts11.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts12.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts13.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts14.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts15.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts15.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts15.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts15.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts15.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts15.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts15.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts16.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts17.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts18.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts19.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+    {
+    name: "Athletic Hoodie",
+    price: 49,
+    img: "img/men-shirts20.webp",
+    desc: "Layer up with our premium stretch hoodie.",
+    link: "product3.html"
+  },
+  ];
+
+  function displayResults(query) {
+    const filtered = products.filter(item =>
+      item.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    if (filtered.length === 0) {
+      searchResults.innerHTML = "<p>No results found</p>";
+    } else {
+      searchResults.innerHTML = filtered
+        .map(
+          item => `
+            <a href="${item.link}" class="result-item">
+              <img src="${item.img}" alt="${item.name}" />
+              <div class="result-info">
+                <h4>${item.name}</h4>
+                <p>${item.desc}</p>
+                <span>€${item.price}</span>
+              </div>
+            </a>
+          `
+        )
+        .join("");
+    }
+
+    searchResults.classList.remove("hidden");
+  }
 
   searchToggle.addEventListener("click", () => {
     searchContainer.classList.toggle("active");
@@ -107,6 +319,22 @@
       searchInput.focus();
     } else {
       searchInput.blur();
+      searchResults.classList.add("hidden");
+    }
+  });
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim();
+    if (query) {
+      displayResults(query);
+    } else {
+      searchResults.classList.add("hidden");
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!searchContainer.contains(e.target) && !searchResults.contains(e.target)) {
+      searchResults.classList.add("hidden");
     }
   });
 });
