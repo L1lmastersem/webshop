@@ -41,7 +41,6 @@
   <a href="#contact1" class="contact-btn">Contact</a>
 </div>
 
-
   <div id="cart-overlay" class="hidden"></div>
   <div id="cart-panel">
     <button id="close-cart" style="margin-bottom: 1rem; background: none; border: none; font-size: 16px; cursor: pointer;">
@@ -56,7 +55,6 @@
     </div>
   </div>
 </header>
-
 
   <section class="hero">
     <div class="overlay"></div>
@@ -194,7 +192,42 @@
     </div>
     <p>&copy; 2025 | KudelCity | All rights reserved</p>
   </div>
+ <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <p>
+        We use cookies to enhance your experience, analyze site usage, and assist in our marketing efforts.
+        By clicking "Accept All Cookies", you agree to the storing of cookies on your device.
+      </p>
+      <div class="cookie-buttons">
+        <button class="btn accept" onclick="acceptCookies()">Accept All Cookies</button>
+        <button class="btn settings" onclick="openCookieSettings()">Cookie Settings</button>
+      </div>
+    </div>
+  </div>
 </footer>
 
+  <div class="cookie-settings-modal" id="cookieSettingsModal">
+    <div class="cookie-settings-content">
+      <h2>Cookie Preferences</h2>
+      <form id="cookieSettingsForm">
+        <label>
+          <input type="checkbox" name="essential" checked disabled />
+          Essential Cookies (Always Active)
+        </label>
+        <label>
+          <input type="checkbox" name="analytics" />
+          Analytics Cookies
+        </label>
+        <label>
+          <input type="checkbox" name="marketing" />
+          Marketing Cookies
+        </label>
+        <div class="settings-buttons">
+          <button type="submit" class="btn save">Save Preferences</button>
+          <button type="button" class="btn cancel" onclick="closeCookieSettings()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
