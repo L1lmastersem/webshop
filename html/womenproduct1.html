@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Vital Seamless Halter Neck Tank</title>
+  <link href="../css/product.css" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
+  <script src="../js/all.mis.js"></script>
+  <script defer="" src="../js/script.js"></script>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">KUDELCITY</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./index.html#about1">About</a></li>
+        <li><a href="./index.html#products">Products</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a class="user-icon" href="User.html">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      <a class="cart-icon" href="#" id="cart-icon" style="position: relative;">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+      <a class="contact-btn" href="./index.html#contact1">Contact</a>
+    </div>
+    <div class="hidden" id="cart-overlay"></div>
+    <div id="cart-panel">
+      <button id="close-cart"
+        style="margin-bottom: 1rem; background: none; border: none; font-size: 16px; cursor: pointer;">
+        ← Close
+      </button>
+      <h3>Your Cart</h3>
+      <div id="cart-items">
+      </div>
+      <div class="cart-footer">
+        <span>Subtotal:</span>
+        <span>€<span id="subtotal">0.00</span></span>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </header>
+  <section class="product-hero">
+    <div class="product-preview">
+      <img alt="Vital Seamless Halter Neck Tank" src="../img/women-top1.webp.webp" />
+    </div>
+    <div class="product-summary">
+      <h1>Vital Seamless Halter Neck Tank</h1>
+      <p class="price">$39.99</p>
+      <p class="desc">
+        Designed for freedom and confidence — this halter neck tank top is your new favorite for every workout.
+        Seamless, sweat-wicking, and sculpting where it matters.
+      </p>
+      <label for="size">Size:</label>
+      <select id="size">
+        <option>Select size</option>
+        <option>XS</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+      </select>
+      <label for="color">Color:</label>
+      <div class="color-options">
+        <input checked="" id="color-grey" name="color" type="radio" value="Grey" />
+        <label for="color-grey" style="background-color: #778899;" title="Grey"></label>
+        <input id="color-black" name="color" type="radio" value="Black" />
+        <label for="color-black" style="background-color: #000000;" title="Black"></label>
+        <input id="color-blue" name="color" type="radio" value="Blue" />
+        <label for="color-blue" style="background-color: #4682B4;" title="Blue"></label>
+      </div>
+      <button class="add-to-cart" onclick="addToCartFromProductPage('Vital Seamless Halter Neck Tank', 39.99)">Add to
+        Cart</button>
+    </div>
+  </section>
+  <div class="go-back-wrapper">
+    <button class="go-back-btn" onclick="history.back()">← Go Back</button>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Delivery Information</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Make A Return</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">Submit a Fake</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>My Account</h4>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="./index.html#about1">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>More About Us</h4>
+        <div class="footer-tiles">
+          <div class="tile"><strong>Blog</strong></div>
+          <div class="tile"><strong>Email Sign Up</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="payment-icons">
+        <img alt="Visa" src="../img/visa-logo-1024x478.jpg" />
+        <img alt="PayPal" src="../img/paypalimg.png" />
+        <img alt="Apple Pay" src="../img/applepay.jpg" />
+        <img alt="Afterpay" src="../img/AfterPay.png" />
+      </div>
+      <p>© 2025 | KudelCity | All rights reserved</p>
+    </div>
+  </footer>
+</body>
+</head>
+
+</html>

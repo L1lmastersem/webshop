@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Men's Collection | KudelCity</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <script src="../js/all.mis.js"></script>
+  <script defer="" src="../js/script.js"></script>
+  <script defer="" src="../js/product.js"></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">KUDELCITY</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-item">
+          <a class="active" href="#">Men</a>
+          <ul class="dropdown">
+            <li><a href="men-shirts.html">Shirts</a></li>
+            <li><a href="men-shorts.html">Shorts</a></li>
+            <li><a href="men-hoodies.html">Hoodies</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="women.html">Women</a>
+          <ul class="dropdown">
+            <li><a href="women-tops.html">Tops</a></li>
+            <li><a href="women-shorts.html">Shorts</a></li>
+            <li><a href="women-leggings.html">Leggings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a class="user-icon" href="User.html">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      <div class="search-container">
+        <div class="search-results hidden" id="search-results"></div>
+        <button aria-label="Open search" class="search-toggle">
+          <i class="fas fa-search"></i>
+        </button>
+        <input class="search-input" placeholder="Search..." type="text" />
+      </div>
+      <a class="cart-icon" href="#" id="cart-icon" style="position: relative;">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+      <a class="contact-btn" href="./index.html#contact1">Contact</a>
+    </div>
+    <div class="cart-overlay hidden" id="cart-overlay"></div>
+    <div class="cart-panel" id="cart-panel">
+      <div class="cart-header">
+        <button id="close-cart"
+          style="margin-bottom: 1rem; background: none; border: none; font-size: 16px; cursor: pointer;">
+          ← Close
+        </button>
+        <h3>Your Cart</h3>
+      </div>
+      <div class="cart-items" id="cart-items">
+      </div>
+      <div class="cart-footer">
+        <span>Subtotal:</span>
+        <span>€<span id="subtotal">0.00</span></span>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </header>
+  <section class="products" style="margin-top: 120px;">
+    <div class="container">
+      <p class="section-label">Men's Collection</p>
+      <h2>Explore our performance-driven gear for men</h2>
+      <div class="filter-container">
+        <button class="filter-btn" id="filter-toggle">
+          <i class="fas fa-filter"></i> Filter
+        </button>
+        <div class="filter-panel hidden" id="filter-panel">
+          <h4>Filter by</h4>
+          <div class="filter-group">
+            <p>Price</p>
+            <label><input name="price" type="radio" value="cheapest" /> Cheapest</label><br />
+            <label><input name="price" type="radio" value="expensive" /> Expensive</label><br />
+            <label><input checked="" name="price" type="radio" value="all" /> All</label>
+          </div>
+          <button class="apply-filters">Apply</button>
+        </div>
+      </div>
+      <div class="product-grid"></div>
+      <div id="loading">Loading...</div>
+    </div>
+  </section>
+</body>
+
+</html>

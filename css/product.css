@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   font-family: 'Arial', sans-serif;
   scroll-behavior: smooth;
 }
@@ -204,7 +205,7 @@ body, html {
   transition: border 0.2s ease-in-out;
 }
 
-.color-options input[type="radio"]:checked + label {
+.color-options input[type="radio"]:checked+label {
   border-color: #2ecc71;
 }
 
@@ -246,7 +247,6 @@ body, html {
   background-color: #555;
 }
 
-
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -285,7 +285,8 @@ body, html {
     padding: 120px 1.5rem 2rem;
   }
 
-  .product-preview, .product-summary {
+  .product-preview,
+  .product-summary {
     max-width: 100%;
   }
 

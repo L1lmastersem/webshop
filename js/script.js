@@ -105,182 +105,182 @@ document.addEventListener("DOMContentLoaded", function () {
 {
     name: "Performance Shirt",
     price: 29,
-    img: "img/men-shirt1.webp",
+    img: "../img/men-shirt1.webp",
     desc: "Breathable and sweat-wicking for every session.",
     link: "product.html"
   },
     {
     name: "Power T-shirt",
     price: 29,
-    img: "img/men-shirt1.webp",
+    img: "../img/men-shirt1.webp",
     desc: "Breathable and sweat-wicking for every session.",
     link: "product3.html"
   },
     {
     name: "Ribbed T-shirt",
     price: 29,
-    img: "img/men-shirt1.webp",
+    img: "../img/men-shirt1.webp",
     desc: "Breathable and sweat-wicking for every session.",
     link: "product3.html"
   },
     {
     name: "Essentials T=shirt",
     price: 49,
-    img: "img/men-shirts4.webp",
+    img: "../img/men-shirts4.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Legacy T-shirt",
     price: 49,
-    img: "img/men-shirts5.webp",
+    img: "../img/men-shirts5.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Warp knit LS T-shirt",
     price: 49,
-    img: "img/men-shirts6.webp",
+    img: "../img/men-shirts6.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Warp knit T-shirt",
     price: 49,
-    img: "img/men-shirts7.webp",
+    img: "../img/men-shirts7.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Crest T-shirt",
     price: 49,
-    img: "img/men-shirts8.webp",
+    img: "../img/men-shirts8.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Lightweight Slub T-shirt",
     price: 49,
-    img: "img/men-shirts9.webp",
+    img: "../img/men-shirts9.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Oversized T-shirt",
     price: 49,
-    img: "img/men-shirts10.webp",
+    img: "../img/men-shirts10.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts11.webp",
+    img: "../img/men-shirts11.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts12.webp",
+    img: "../img/men-shirts12.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts13.webp",
+    img: "../img/men-shirts13.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts14.webp",
+    img: "../img/men-shirts14.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts15.webp",
+    img: "../img/men-shirts15.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts15.webp",
+    img: "../img/men-shirts15.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts15.webp",
+    img: "../img/men-shirts15.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts15.webp",
+    img: "../img/men-shirts15.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts15.webp",
+    img: "../img/men-shirts15.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts15.webp",
+    img: "../img/men-shirts15.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts15.webp",
+    img: "../img/men-shirts15.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts16.webp",
+    img: "../img/men-shirts16.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts17.webp",
+    img: "../img/men-shirts17.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts18.webp",
+    img: "../img/men-shirts18.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts19.webp",
+    img: "../img/men-shirts19.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
     {
     name: "Athletic Hoodie",
     price: 49,
-    img: "img/men-shirts20.webp",
+    img: "../img/men-shirts20.webp",
     desc: "Layer up with our premium stretch hoodie.",
     link: "product3.html"
   },
