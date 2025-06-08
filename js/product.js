@@ -286,6 +286,7 @@ document.querySelector(".apply-filters").addEventListener("click", () => {
   });
 });
 
+/*search*/
 document.addEventListener("DOMContentLoaded", function () {
   const searchToggle = document.querySelector(".search-toggle");
   const searchContainer = document.querySelector(".search-container");

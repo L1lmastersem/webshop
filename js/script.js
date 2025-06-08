@@ -338,3 +338,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+window.addEventListener('load', () => {
+  if (!localStorage.getItem("cookieConsent")) {
+    document.getElementById("cookieBanner").style.display = "block";
+  }
+});
+
+function acceptCookies() {
+  localStorage.setItem("cookieConsent", JSON.stringify({
+    essential: true,
+    analytics: true,
+    marketing: true
+  }));
+  document.getElementById("cookieBanner").style.display = "none";
+}
+
+function openCookieSettings() {
+  document.getElementById("cookieSettingsModal").style.display = "flex";
+}
+
+function closeCookieSettings() {
+  document.getElementById("cookieSettingsModal").style.display = "none";
+}
+
+document.getElementById("cookieSettingsForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const analytics = this.analytics.checked;
+  const marketing = this.marketing.checked;
+
+  localStorage.setItem("cookieConsent", JSON.stringify({
+    essential: true,
+    analytics,
+    marketing
+  }));
+
+  closeCookieSettings();
+  document.getElementById("cookieBanner").style.display = "none";
+});
